@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="12" name="pytest" skips="0" tests="12" time="0.110"><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="8" name="test_person_class_init" time="0.0008423328399658203"><failure message="TypeError: object() takes no parameters">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_person_class_init&gt;
+
+    def test_person_class_init(self):
+        global per_1
+        global per_2
+        global per_3
+        global per_4
+        global per_5
+&gt;       per_1 = Person(&quot;Jeff&quot;, 31)
+E       TypeError: object() takes no parameters
+
+test/index_test.py:15: TypeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="21" name="test_person_class_property_methods" time="0.0006873607635498047"><failure message="NameError: name &apos;per_1&apos; is not defined">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_person_class_property_methods&gt;
+
+    def test_person_class_property_methods(self):
+&gt;       self.assertEqual(per_1._name, &quot;Jeff&quot;)
+E       NameError: name &apos;per_1&apos; is not defined
+
+test/index_test.py:23: NameError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="42" name="test_person_count_class_method" time="0.0006325244903564453"><failure message="AttributeError: type object &apos;Person&apos; has no attribute &apos;count&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_person_count_class_method&gt;
+
+    def test_person_count_class_method(self):
+&gt;       self.assertEqual(Person.count(), 5)
+E       AttributeError: type object &apos;Person&apos; has no attribute &apos;count&apos;
+
+test/index_test.py:44: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="45" name="test_person_find_by_name_class_method" time="0.0006220340728759766"><failure message="AttributeError: type object &apos;Person&apos; has no attribute &apos;find_by_name&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_person_find_by_name_class_method&gt;
+
+    def test_person_find_by_name_class_method(self):
+&gt;       self.assertEqual(Person.find_by_name(&quot;Jeff&quot;), per_1)
+E       AttributeError: type object &apos;Person&apos; has no attribute &apos;find_by_name&apos;
+
+test/index_test.py:47: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="51" name="test_person_is_older_than_class_method" time="0.0006344318389892578"><failure message="AttributeError: type object &apos;Person&apos; has no attribute &apos;is_older_than&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_person_is_older_than_class_method&gt;
+
+    def test_person_is_older_than_class_method(self):
+&gt;       self.assertItemsEqual(Person.is_older_than(30), [per_1, per_3])
+E       AttributeError: type object &apos;Person&apos; has no attribute &apos;is_older_than&apos;
+
+test/index_test.py:53: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="54" name="test_person_mean_age_class_method" time="0.0005981922149658203"><failure message="AttributeError: type object &apos;Person&apos; has no attribute &apos;mean_age&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_person_mean_age_class_method&gt;
+
+    def test_person_mean_age_class_method(self):
+&gt;       self.assertEqual(Person.mean_age(), 29)
+E       AttributeError: type object &apos;Person&apos; has no attribute &apos;mean_age&apos;
+
+test/index_test.py:56: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="48" name="test_person_name_starts_with_class_method" time="0.0005948543548583984"><failure message="AttributeError: type object &apos;Person&apos; has no attribute &apos;name_starts_with&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_person_name_starts_with_class_method&gt;
+
+    def test_person_name_starts_with_class_method(self):
+&gt;       self.assertEqual(Person.name_starts_with(&apos;K&apos;), [per_3])
+E       AttributeError: type object &apos;Person&apos; has no attribute &apos;name_starts_with&apos;
+
+test/index_test.py:50: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="27" name="test_query_count_class_method" time="0.0006170272827148438"><failure message="AttributeError: type object &apos;Query&apos; has no attribute &apos;count&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_query_count_class_method&gt;
+
+    def test_query_count_class_method(self):
+&gt;       self.assertEqual(Query.count(Person), 5)
+E       AttributeError: type object &apos;Query&apos; has no attribute &apos;count&apos;
+
+test/index_test.py:29: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="30" name="test_query_find_by_name_class_method" time="0.0006206035614013672"><failure message="AttributeError: type object &apos;Query&apos; has no attribute &apos;find_by_name&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_query_find_by_name_class_method&gt;
+
+    def test_query_find_by_name_class_method(self):
+&gt;       self.assertEqual(Query.find_by_name(Person, &quot;Jeff&quot;), per_1)
+E       AttributeError: type object &apos;Query&apos; has no attribute &apos;find_by_name&apos;
+
+test/index_test.py:32: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="36" name="test_query_is_older_than_class_method" time="0.000640869140625"><failure message="AttributeError: type object &apos;Query&apos; has no attribute &apos;is_older_than&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_query_is_older_than_class_method&gt;
+
+    def test_query_is_older_than_class_method(self):
+&gt;       self.assertItemsEqual(Query.is_older_than(Person, 30), [per_1, per_3])
+E       AttributeError: type object &apos;Query&apos; has no attribute &apos;is_older_than&apos;
+
+test/index_test.py:38: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="39" name="test_query_mean_age_class_method" time="0.0006282329559326172"><failure message="AttributeError: type object &apos;Query&apos; has no attribute &apos;mean_age&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_query_mean_age_class_method&gt;
+
+    def test_query_mean_age_class_method(self):
+&gt;       self.assertEqual(Query.mean_age(Person), 29)
+E       AttributeError: type object &apos;Query&apos; has no attribute &apos;mean_age&apos;
+
+test/index_test.py:41: AttributeError</failure></testcase><testcase classname="test.index_test.TestQueryPersonClassMethods" file="test/index_test.py" line="33" name="test_query_name_starts_with_class_method" time="0.0006427764892578125"><failure message="AttributeError: type object &apos;Query&apos; has no attribute &apos;name_starts_with&apos;">self = &lt;index_test.TestQueryPersonClassMethods testMethod=test_query_name_starts_with_class_method&gt;
+
+    def test_query_name_starts_with_class_method(self):
+&gt;       self.assertItemsEqual(Query.name_starts_with(Person, &apos;K&apos;), [per_3])
+E       AttributeError: type object &apos;Query&apos; has no attribute &apos;name_starts_with&apos;
+
+test/index_test.py:35: AttributeError</failure></testcase></testsuite>
